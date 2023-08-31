@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.btn {
+    text-decoration: none;
+    font-family: cursive;
+    font-weight: bolder;
+    color: black;
+    background-color: wheat;
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, .3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn span {
+    position: relative;
+    z-index: 1;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    background-color: orangered;
+    height: 0;
+    width: 0;
+    left: var(--xPos);
+    top: var(--yPos);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: width 500ms, height 500ms;
+}
+
+.btn:hover::before {
+    height: 300px;
+    width: 300px;
+}
