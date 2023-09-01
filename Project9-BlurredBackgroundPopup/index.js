@@ -11,3 +11,8 @@ closeIcon.addEventListener("click", () => {
     container.classList.remove("active");
     popupEl.classList.add("active");
 })
+btn2.addEventListener("click", () => {
+    container.classList.remove("active");
+    popupEl.classList.add("active");
+    alert("Verify Your Email Address");
+});
