@@ -11,6 +11,7 @@ body {
     height: 100vh;
     background: url("https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?w=1060&t=st=1693589294~exp=1693589894~hmac=94b6fbb1b507d7e878f05ee5e91c852c7fedde24f41a328c5c87d511f69fb82c");
     background-size: cover;
+    transition: filter 0.7s;
 }
 
 .main-container h1 {
@@ -47,7 +48,7 @@ body {
     filter: blur(5px) brightness(0.7);
 }
 
-.popup {
+.popup-container {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
@@ -62,6 +63,8 @@ body {
     background-size: cover;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba((0), 0, 0, 0.3);
+    opacity: 1;
+    transition: all 0.7s;
 }
 
 h4 {
@@ -106,4 +109,6 @@ h4 {
 
 .active.popup-container {
     visibility: hidden;
+    opacity: 0;
+    top: 10%;
 }
