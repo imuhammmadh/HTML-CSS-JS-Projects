@@ -5,4 +5,7 @@ kits.forEach((kits) => {
     btnEl.classList.add("btn");
     btnEl.innerText = kits
     drums.appendChild(btnEl);
+    let audioEl = document.createElement("audio");
+    audioEl.src =
+        drums.appendChild(audioEl);
 })
