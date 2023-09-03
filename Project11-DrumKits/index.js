@@ -1,4 +1,4 @@
-let kits = ["crash", "kick", "snare", "tom"];
+let kits = ["kick", "snare", "tom"];
 let drums = document.querySelector(".drums");
 kits.forEach((kits) => {
     let btnEl = document.createElement("button");
