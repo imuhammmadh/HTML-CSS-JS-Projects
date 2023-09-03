@@ -37,22 +37,8 @@ h1 {
     min-width: 200px;
     background-size: cover;
     cursor: pointer;
-}
-
-.crash {
-    background-image: url("crash.png");
-}
-
-.kick {
-    background-image: url("kick.png");
-}
-
-.snare {
-    background-image: url("snare.png");
-}
-
-.tom {
-    background-image: url("tom.png");
+    background-image: url(tom.png);
+    text-transform: capitalize;
 }
 
 .btn:hover {
