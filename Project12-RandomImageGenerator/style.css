@@ -9,3 +9,25 @@ body {
 .image-container {
     text-align: center;
 }
+
+.image-container img {
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+    background-color: aqua;
+    border: none;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.75;
+}
