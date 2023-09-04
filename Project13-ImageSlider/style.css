@@ -4,7 +4,42 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    overflow: hidden;
     flex-direction: column;
     background-color: wheat;
+}
+
+.slider {
+    position: relative;
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.images {
+    display: flex;
+    transform: translateX(-500px);
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: azure;
+    font-size: 20px;
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.btn.left {
+    left: 10px;
+}
+
+.btn.right {
+    right: 10px;
+}
+
+.btn:hover {
+    opacity: 1;
 }
