@@ -5,6 +5,7 @@ body {
     justify-content: center;
     height: 100vh;
     overflow: hidden;
+    transition: 0.4s;
 }
 
 .input {
