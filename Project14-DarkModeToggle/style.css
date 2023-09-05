@@ -1,3 +1,12 @@
+body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
 .input {
     visibility: hidden;
 }
@@ -8,4 +17,13 @@
     height: 40px;
     background-color: lightgray;
     border-radius: 20px;
+}
+
+.circle {
+    width: 34px;
+    background-color: red;
+    height: 34px;
+    border-radius: 50%;
+    top: 3px;
+    position: absolute;
 }
