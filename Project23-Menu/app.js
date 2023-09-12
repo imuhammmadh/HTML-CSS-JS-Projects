@@ -71,6 +71,14 @@ const menu = [
     img: "./images/item-9.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
+  {
+    id: 10,
+    title: "steak",
+    category: "dinner",
+    price: 1599,
+    img: "./images/item-10.jpeg",
+    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+  },
 ];
 function displayMenuItems(menuItems) {
   let displayMenu = menuItems.map((item) => {
@@ -88,23 +96,37 @@ function displayMenuItems(menuItems) {
   displayMenu = displayMenu.join("");
   sectionCenter.innerHTML = displayMenu
 };
-window.addEventListener('DOMContentLoaded', () => {
-  displayMenuItems(menu);
-});
-let sectionCenter = document.querySelector('.section-center');
-let filterBtns = document.querySelectorAll('.filter-btn');
-filterBtns.forEach((btn) => {
-  btn.addEventListener('click', (e) => {
-    let category = e.currentTarget.dataset.id;
-    let menuCategory = menu.filter((menuItem) => {
-      if (menuItem.category == category) {
-        return menuItem;
+function displayMenuBtns() {
+  let categories = menu.reduce((values, item) => {
+    if (!values.includes(item.category)) {
+      values.push(item.category);
+    }
+    return values
+  }, ['all']);
+  let categoryBtns = categories.map((category) => {
+    return `<button class="filter-btn" type="button" data-id=${category}>${category}</button>`;
+  }).join("");
+  container.innerHTML = categoryBtns;
+  let filterBtns = document.querySelectorAll('.filter-btn');
+  filterBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      let category = e.currentTarget.dataset.id;
+      let menuCategory = menu.filter((menuItem) => {
+        if (menuItem.category == category) {
+          return menuItem;
+        }
+      })
+      if (category == "all") {
+        displayMenuItems(menu);
+      } else {
+        displayMenuItems(menuCategory);
       }
     })
-    if (category == "all") {
-      displayMenuItems(menu);
-    } else {
-      displayMenuItems(menuCategory);
-    }
   })
-})
+}
+window.addEventListener('DOMContentLoaded', () => {
+  displayMenuItems(menu);
+  displayMenuBtns();
+});
+let sectionCenter = document.querySelector('.section-center');
+let container = document.querySelector(".btn-container");
