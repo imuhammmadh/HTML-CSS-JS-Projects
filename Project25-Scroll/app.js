@@ -39,3 +39,12 @@ window.addEventListener("scroll", () => {
 });
 // ********** smooth scroll ************
 // select links
+let scrollLinks = document.querySelectorAll('.scroll-link');
+scrollLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        let id = e.currentTarget.getAttribute("href").slice(1);
+        let element = document.getElementById(id);
+        let position = element.offsetTop;
+    });
+});
