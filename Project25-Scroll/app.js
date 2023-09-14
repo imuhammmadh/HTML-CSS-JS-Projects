@@ -7,7 +7,19 @@
 let year = document.getElementById("date");
 year.innerHTML = new Date().getFullYear();
 // ********** close links ************
+let navToggle = document.querySelector('.nav-toggle');
+let linksContainer = document.querySelector('.links-container');
+let links = document.querySelector('.links');
 
+navToggle.addEventListener('click', () => {
+    let containerHeight = linksContainer.getBoundingClientRect().height;
+    let linksHeight = links.getBoundingClientRect().height;
+    if (containerHeight === 0) {
+        linksContainer.style.height = `${linksHeight}px`;
+    } else {
+        linksContainer.style.height = 0;
+    }
+});
 // ********** fixed navbar ************
 
 // ********** smooth scroll ************
