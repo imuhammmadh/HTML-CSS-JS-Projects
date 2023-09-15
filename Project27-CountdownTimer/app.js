@@ -35,4 +35,31 @@ let day = futureDate.getDay();
 day = weekdays[day];
 month = months[month];
 
-giveaway.textContent = `giveaway ends on ${day},${date} ${month} ${year} ${hours}:${minutes}am`
+giveaway.textContent = `giveaway ends on ${day},${date} ${month} ${year} ${hours}:${minutes}`;
+
+let futureTime = futureDate.getTime();
+
+function getRemainingTime() {
+  let today = new Date().getTime();
+  let t = futureTime - today;
+  let oneDay = 24 * 60 * 60 * 1000;
+  let oneHour = 60 * 60 * 1000;
+  let oneMinute = 60 * 1000;
+  let oneSecond = 1000;
+  let days = t / oneDay;
+  days = Math.floor(days);
+  let hours = Math.floor((t % oneDay) / oneHour);
+  let minutes = Math.floor((t % oneHour) / oneMinute);
+  let seconds = Math.floor((t % oneMinute) / oneSecond);
+  let values = [days, hours, minutes, seconds]
+  function format(item) {
+    if (item < 10) {
+      return item = `0${item}`
+    }
+    return item
+  }
+  items.forEach((item, index) => {
+    item.innerHTML = format(values[index])
+  })
+}
+getRemainingTime();
