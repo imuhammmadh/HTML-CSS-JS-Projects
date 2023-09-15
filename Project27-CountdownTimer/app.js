@@ -25,7 +25,12 @@ let giveaway = document.querySelector('.giveaway')
 let deadline = document.querySelector('.deadline')
 let items = document.querySelectorAll('.deadline-format h4')
 
-let futureDate = new Date(2023, 8, 24, 11, 30, 0);
+let temDate = new Date();
+let tempYear = temDate.getFullYear();
+let tempMonth = temDate.getMonth();
+let tempDay = temDate.getDate();
+
+let futureDate = new Date(tempYear, tempMonth, tempDay + 10, 11, 30, 0)
 let year = futureDate.getFullYear();
 let hours = futureDate.getHours();
 let minutes = futureDate.getMinutes();
@@ -35,7 +40,7 @@ let day = futureDate.getDay();
 day = weekdays[day];
 month = months[month];
 
-giveaway.textContent = `giveaway ends on ${day},${date} ${month} ${year} ${hours}:${minutes}`;
+giveaway.textContent = `giveaway ends on ${day},${date} ${month} ${year} ${hours}:${minutes}am`;
 
 let futureTime = futureDate.getTime();
 
@@ -61,6 +66,10 @@ function getRemainingTime() {
   items.forEach((item, index) => {
     item.innerHTML = format(values[index])
   })
+  if (t < 0) {
+    clearInterval(countdown);
+    deadline.innerHTML = `<h4 class="expired">sorry,this giveaway has expired</h4>`
+  }
 }
 let countdown = setInterval(getRemainingTime, 1000);
 
