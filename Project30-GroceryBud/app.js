@@ -7,7 +7,9 @@ let container = document.querySelector('.grocery-container')
 let list = document.querySelector('.grocey-list')
 let clearBtn = document.querySelector('.clear-btn')
 // edit option
-
+let editElement;
+let editFlag = false;
+let editID = "";
 // ****** EVENT LISTENERS **********
 
 // ****** FUNCTIONS **********
