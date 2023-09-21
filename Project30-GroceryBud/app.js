@@ -13,7 +13,17 @@ let editID = "";
 // ****** EVENT LISTENERS **********
 form.addEventListener('submit', addItem)
 // ****** FUNCTIONS **********
-
+function addItem(e) {
+    e.preventDefault();
+    let value = grocery.value
+    let id = new Date().getTime().toString()
+    if (value && !editFlag) { }
+    else if (value && editFlag) { }
+    else {
+        alert.textContent = ""
+        alert.classList.add("alert-danger")
+    }
+}
 // ****** LOCAL STORAGE **********
 
 // ****** SETUP ITEMS **********
