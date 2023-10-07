@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Addition Game</title>
     <link rel="stylesheet" href="style.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
 </head>
 <body>
     <div class="main">
-        <h1 class="heading">Addition Game</h1>
         <p class="score">score: <span class="score-num">0</span></p>
-        <h3 class="question">What is <span class="first">1</span>+<span class="second">1</span>?</h3>
+        <h1 class="question">What is <span class="first">1</span> added to <span class="second">1</span>?</h1>
         <form>
-            <input type="number" name="answer" class="answer" placeholder="Enter Your Answer">
-            <input type="button" value="submit">
+            <input type="text" class="answer" placeholder="Enter Your Answer" autofocus autocomplete="off">
+            <button type="submit" class="btn">Submit</button>
         </form>
     </div>
     <script src="index.js"></script>
