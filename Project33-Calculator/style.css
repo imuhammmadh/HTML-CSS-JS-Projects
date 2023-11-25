@@ -5,65 +5,74 @@ body {
     text-align: center;
     margin: 0;
     height: 100vh;
-    flex-direction: column;
-    font-family: "Poppins";
-    color: whi;
+    font-family: "Helvetica Neue", sans-serif;
+    background-color: #f4f4f4;
 }
 
-.main {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-    height: 50%;
+.calculator {
     width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#input {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    font-size: 30px;
-    text-align: center;
+.display {
+    background-color: #f0f0f0;
     padding: 10px;
-    border: solid 2px black;
-    color: black;
-    height: 20%;
 }
 
-.signs1 {
-    display: flex;
-    align-items: start;
-    flex-direction: row;
-    justify-content: left;
-    width: 100%;
-    height: 15%;
-}
-
-.signs1 button {
-    width: 33.3%;
-    height: 100%;
-    font-weight: bolder;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-    font-size: 30px;
+.display input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: 1.5em;
     border: none;
-    cursor: pointer;
-    background-color: orange;
+    outline: none;
+    background-color: #f0f0f0;
 }
 
-.signs2 {
-    display: flex;
-    align-items: end;
-    justify-content: right;
-    flex-direction: column;
-    width: 33.3%;
-    height: 65%;
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
-.signs2 button {
+button {
     width: 100%;
-    height: 33.3%;
-    font-weight: bolder;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
-    font-size: 30px;
-    border: none;
+    padding: 15px;
+    font-size: 1.2em;
     cursor: pointer;
-    background-color: orange;
+    border: none;
+    outline: none;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+.operator {
+    background-color: #ff9500;
+    color: #fff;
+}
+
+.number {
+    background-color: #d4d4d2;
+}
+
+.equal {
+    background-color: #4cd964;
+    color: #fff;
+    /* grid-column: span 2; */
+}
+
+.clear {
+    background-color: #ff3b30;
+    color: #fff;
+    grid-column: span 3;
+    border: #ccc solid 0.1px;
+}
+
+.delete {
+    background-color: #ff3b30;
 }

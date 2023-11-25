@@ -1,27 +1,27 @@
-//Elements
+//Creating Elements
+let numbers = document.querySelectorAll('.number')
+let area = document.getElementById("input")
+let operators = document.querySelectorAll(".operator")
 let clear = document.querySelector(".clear")
-let add = document.querySelector(".add")
-let minus = document.querySelector(".minus")
-let multiply = document.querySelector(".multiply")
-let divide = document.querySelector(".divide")
-let equal = document.querySelector(".equal")
-let input = document.querySelector("#input")
+let equals = document.querySelector(".equal")
+let deleteNum = document.querySelector(".delete")
 //Event Listeners
+numbers.forEach(num => {
+    num.addEventListener("click", () => {
+        area.value += num.id
+    })
+})
+operators.forEach(operator => {
+    operator.addEventListener("click", () => {
+        area.value += operator.id
+    })
+})
 clear.addEventListener("click", () => {
-    input.value = ""
+    area.value = ""
 })
-add.addEventListener("click", () => {
-    input.value += "+"
+equals.addEventListener("click", () => {
+    area.value = eval(area.value)
 })
-minus.addEventListener("click", () => {
-    input.value += "-"
-})
-multiply.addEventListener("click", () => {
-    input.value += "x"
-})
-divide.addEventListener("click", () => {
-    input.value += "/"
-})
-equal.addEventListener("click", () => {
-    input.value = eval(input.value)
+deleteNum.addEventListener("click", () => {
+    area.value = area.value.substring(0, area.value.length - 1)
 })
