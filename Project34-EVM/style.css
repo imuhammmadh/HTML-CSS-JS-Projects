@@ -18,6 +18,10 @@ body {
     flex-direction: column;
 }
 
+h1 {
+    text-align: center;
+}
+
 .candidate {
     display: flex;
     height: 33.3%;
