@@ -1,0 +1,52 @@
+body {
+    font-family: "poppins";
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    height: 85%;
+    margin: auto;
+    width: 90%;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    min-width: 800px;
+    position: relative;
+}
+
+.killer-container {
+    height: 100%;
+    width: 50px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.killer-one {
+    height: 40%;
+    background-color: blueviolet;
+    width: 50px;
+}
+
+.killer-two {
+    height: 40%;
+    background-color: blueviolet;
+    width: 50px;
+}
+
+.ball {
+    position: absolute;
+    background-color: red;
+    bottom: 300px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+}
