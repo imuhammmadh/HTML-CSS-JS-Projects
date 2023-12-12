@@ -1,52 +1,58 @@
 body {
-    font-family: "poppins";
-    text-align: center;
     margin: 0;
     height: 100vh;
-    width: 100vw;
+    width: 100wh;
     overflow: hidden;
-    display: block;
+    display: flex;
     align-items: center;
     justify-content: center;
+    font-family: "poppins";
+    flex-direction: column;
 }
 
 .main {
-    height: 85%;
-    margin: auto;
-    width: 90%;
+    margin: 0%;
+    height: 600px;
+    width: 700px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
-    border-radius: 30px;
-    min-width: 800px;
     position: relative;
+    overflow: hidden;
+    border: solid 5px green;
+    min-width: 700px;
 }
 
 .killer-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
     height: 100%;
     width: 50px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    overflow: hidden;
 }
 
 .killer-one {
     height: 40%;
+    width: 100%;
     background-color: blueviolet;
-    width: 50px;
 }
 
 .killer-two {
     height: 40%;
+    width: 100%;
     background-color: blueviolet;
-    width: 50px;
 }
 
 .ball {
-    position: absolute;
-    background-color: red;
-    bottom: 300px;
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: red;
+    position: absolute;
+    top: 44%;
+    left: 45.5%;
 }
